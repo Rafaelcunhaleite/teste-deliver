@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "0a0fa74b-e7d2-4ed1-a014-cd97d08674a6",
+		"name": "delever",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/conta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\n       \n        \"nomeConta\": \"Maria\",\n        \"valorOriginal\": 10.20,\n        \"valorCorrigido\": 10.20,\n        \"dataVencimento\": \"26/04/2021\",\n        \"dataPagamento\": \"25/04/2021\",\n        \"diasAtraso\": \"0\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/conta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alterar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\n       \n        \"nomeConta\": \"Pedro\",\n        \"valorOriginal\": 10.20,\n        \"valorCorrigido\": 10.20,\n        \"dataVencimento\": \"26/04/2021\",\n        \"dataPagamento\": \"25/04/2021\",\n        \"diasAtraso\": \"0\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/conta/:contaId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						":contaId"
+					],
+					"variable": [
+						{
+							"key": "contaId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
